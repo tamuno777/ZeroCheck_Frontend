@@ -17,7 +17,7 @@ const nav = [
   {
     name: "Dashboard",
     icon: Home,
-    link: "/sideNav-one",
+    link: "/dashboard",
   },
   {
     name: "Events",
@@ -55,33 +55,35 @@ const bottomNav = [
 ];
 const SideNavigation = () => {
   return (
-    <div className="hidden lg:block col-span-3 h-full bg-white overflow-y-scroll relative">
-      <div className="pt-[58px] pl-[38px] pr-[15px]">
-        <h4 className="text-3xl xl:text-4xl font-semibold text-black">
-          ZEROCHECK
-        </h4>
-      </div>
-      <div className="flex flex-col h-5/6 justify-between">
-        <div className="mt-[72px] flex flex-col items-end  space-y-[46.5px]">
+    <section className="hidden py-6 pl-10 bg-white relative min-h-screen flex-col justify-between lg:flex">
+      <section className="space-y-12">
+        <div className="py-8 pr-4">
+          <h4 className="text-3xl xl:text-4xl font-semibold text-black">
+            ZEROCHECK
+          </h4>
+        </div>
+
+        <div className="space-y-10 ml-4">
           {nav.map((_data, _index) => (
             <LinksComponent _data={_data} _index={_index} key={_index} />
           ))}
         </div>
-        <div className="flex flex-col items-end  space-y-[46.5px]">
-          {bottomNav.map((_data, _index) => {
-            if (_data.name !== "Logout") {
-              return (
-                <LinksComponent _data={_data} _index={_index} key={_index} />
-              );
-            } else {
-              return (
-                <ButtonComponent _data={_data} _index={_index} key={_index} />
-              );
-            }
-          })}
-        </div>
-      </div>
-    </div>
+      </section>
+
+      <section className="flex flex-col space-y-8 ml-4">
+        {bottomNav.map((_data, _index) => {
+          if (_data.name !== "Logout") {
+            return (
+              <LinksComponent _data={_data} _index={_index} key={_index} />
+            );
+          } else {
+            return (
+              <ButtonComponent _data={_data} _index={_index} key={_index} />
+            );
+          }
+        })}
+      </section>
+    </section>
   );
 };
 
@@ -101,7 +103,7 @@ function LinksComponent({ _data, _index }: ILinkProps) {
     <Link
       href={_data?.link}
       key={_index}
-      className={`flex items-center gap-4 w-9/12 ${
+      className={`flex items-center gap-8 w-full ${
         pathname === _data?.link ? "border-r-4 border-pink-600" : ""
       }`}
     >
@@ -109,7 +111,7 @@ function LinksComponent({ _data, _index }: ILinkProps) {
         <Image src={_data.icon} alt={_data.name} fill />
       </div>
       <h5
-        className={`text-black ${
+        className={`text-black text-sm ${
           pathname === _data?.link ? "font-extrabold" : "font-light"
         }`}
       >
@@ -125,7 +127,7 @@ function ButtonComponent({ _data, _index }: ILinkProps) {
     <button
       onClick={() => {}}
       key={_index}
-      className={`flex items-center gap-4 w-9/12 ${
+      className={`flex items-center gap-8 w-full ${
         pathname === _data?.link ? "border-r-4 border-pink-600" : ""
       }`}
     >
@@ -133,7 +135,7 @@ function ButtonComponent({ _data, _index }: ILinkProps) {
         <Image src={_data.icon} alt={_data.name} fill />
       </div>
       <h5
-        className={`text-black ${
+        className={`text-black text-sm ${
           pathname === _data?.link ? "font-extrabold" : "font-light"
         }`}
       >

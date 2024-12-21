@@ -1,14 +1,14 @@
-import Image from "next/image"
+import Image from "next/image";
 
 interface EventCardProps {
-  title: string
-  time: string
-  date: string
-  location: string
-  platform: string
-  price: string
-  currency: string
-  imageUrl?: string
+  title: string;
+  time: string;
+  date: string;
+  location: string;
+  platform: string;
+  price: string;
+  currency: string;
+  imageUrl: string;
 }
 
 export default function EventCard({
@@ -19,10 +19,10 @@ export default function EventCard({
   platform,
   price,
   currency,
-  imageUrl
+  imageUrl,
 }: EventCardProps) {
   return (
-    <div className="bg-white p-5 rounded-md">
+    <div className="bg-[#EDEDED] p-5 rounded-md">
       <div className="">
         <Image
           src={imageUrl}
@@ -49,6 +49,5 @@ export default function EventCard({
         </button>
       </div>
     </div>
-  )
+  );
 }
-
