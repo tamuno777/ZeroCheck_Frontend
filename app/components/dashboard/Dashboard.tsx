@@ -5,6 +5,7 @@ import ActiveEvents from "./ActiveEvents";
 import RecentActivities from "./RecentActivities";
 import UpcomingEvents from "./UpcomingEvents";
 import SideNavigation from "../sideNavOne";
+import ExploreCategory from "@/app/explore/components/ExploreCategory";
 
 const Dashboard = () => {
   return (
@@ -23,7 +24,6 @@ const Dashboard = () => {
             priority
           />
         </div>
-
         <header className="flex justify-between items-center">
           <div className="flex gap-3">
             <div className="relative">
@@ -95,7 +95,6 @@ const Dashboard = () => {
             </Card>
           </div>
         </header>
-
         <main className="relative z-10">
           <section className="py-4 mb-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <Card>
@@ -320,7 +319,9 @@ const Dashboard = () => {
           </section>
 
           <UpcomingEvents />
-        </main>
+
+          <ExploreCategory />
+        </main>{" "}
       </section>
     </div>
   );
