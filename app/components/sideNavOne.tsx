@@ -53,9 +53,14 @@ const bottomNav = [
     link: "/logout",
   },
 ];
+
 const SideNavigation = () => {
+  
+  const pathname = usePathname()
+  const isGuest = pathname.includes('guest')
+
   return (
-    <section className="hidden py-6 pl-10 bg-white  min-h-screen fixed flex-col justify-between lg:flex">
+    <section className={`hidden py-6 pl-10 bg-white  min-h-screen flex-col justify-between lg:flex ${!isGuest ? 'fixed' : ''}`}>
       <section className="space-y-12">
         <div className="py-8 pr-4">
           <h4 className="text-3xl xl:text-4xl font-semibold text-black">
@@ -71,7 +76,7 @@ const SideNavigation = () => {
       </section>
 
       <section className="flex flex-col space-y-8 ml-4">
-        {bottomNav.map((_data, _index) => {
+        {!isGuest && bottomNav.map((_data, _index) => {
           if (_data.name !== "Logout") {
             return (
               <LinksComponent _data={_data} _index={_index} key={_index} />

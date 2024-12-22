@@ -7,7 +7,7 @@ import { verify } from "./actions/verify/verify";
 
 export default function Home() {
 
-  // const app_id = process.env.NEXT_PUBLIC_WLD_APP_ID as `app_${string}`;
+  const app_id = process.env.NEXT_PUBLIC_WLD_APP_ID as `app_${string}`;
   const action = process.env.NEXT_PUBLIC_WLD_ACTION;
 
   if (!app_id) {

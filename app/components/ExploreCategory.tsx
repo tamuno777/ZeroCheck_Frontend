@@ -1,6 +1,6 @@
 import Card from "./dashboard/Card";
 import ExploreCategoryCard from "./ExploreCategoryCard";
-const exploreData = [
+export const exploreData = [
   {
     title: "arts & culture",
     event_count: 10,

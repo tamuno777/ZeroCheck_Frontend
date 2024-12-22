@@ -5,7 +5,7 @@ import ActiveEvents from "./ActiveEvents";
 import RecentActivities from "./RecentActivities";
 import UpcomingEvents from "./UpcomingEvents";
 import SideNavigation from "../sideNavOne";
-import ExploreCategory from "@/app/explore/components/ExploreCategory";
+import ExploreCategory from "@/app/components/ExploreCategory";
 
 const Dashboard = () => {
   return (
