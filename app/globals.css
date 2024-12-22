@@ -25,3 +25,7 @@ body {
     text-wrap: balance;
   }
 }
+.heroBg{
+  background-image: url("../public/images/HeroBg.png");
+  background-size: cover;
+}
