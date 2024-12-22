@@ -55,7 +55,7 @@ const bottomNav = [
 ];
 const SideNavigation = () => {
   return (
-    <section className="hidden py-6 pl-10 bg-white relative min-h-screen flex-col justify-between lg:flex">
+    <section className="hidden py-6 pl-10 bg-white  min-h-screen fixed flex-col justify-between lg:flex">
       <section className="space-y-12">
         <div className="py-8 pr-4">
           <h4 className="text-3xl xl:text-4xl font-semibold text-black">
