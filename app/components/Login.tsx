@@ -21,12 +21,12 @@ export default function LogInPage() {
           {/* Card Container */}
           <div className="box">
             <div className="bg-[#FFFFFF] shadow-lg rounded-lg p-8 max-w-sm w-full">
-              <h2 className="font-instrument-sans text-[29.88px] font-bold text-left decoration-none text-center mb-4 text-[#1D1D1D] flex items-center justify-center space-x-2">
+              <h2 className="font-instrument-sans text-[29.88px] font-bold text-left decoration-none text-center mb-4 text-[#1D1D1D] flex items-center justify-center space-x-1">
                 <span>
                   <img
-                    src="/icons/zerocheckLogo.png"
+                    src="/icons/logo2.svg"
                     alt="ZeroCheck Logo"
-                    className="w-9 h-9 mr-1"
+                    className="w-9 h-9"
                   />
                 </span>
                 <span>ZeroCheck</span>
